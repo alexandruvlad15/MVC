@@ -1,17 +1,17 @@
 package main
 
 import (
-	"Part2/Controller"
-	"Part2/Views"
+	"Part2/Controller" //pentru aflarea rezultatelor
+	"Part2/Views"      //pentru citirea si afisarea datelor
 )
 
 func main() {
-	// Citim valorile de intrare folosind pachetul View
+	// input
 	rho, G, S, P, Cx0, eta, k, Cz, Czmax, Cx := Views.Read()
 
-	// Determinăm soluțiile folosind controller-ul
+	// obtinerea rezultatelor
 	v, gamma, Vmax, Gammamax := Controller.DetermineSolutions(rho, S, P, G, Cx0, k, eta, Cz, Cx, Czmax)
 
-	// Afișăm rezultatele folosind View
+	// output
 	Views.DispRes(nil, rho, S, P, G, Cx0, k, eta, Cz, Cx, v, gamma, Vmax, Gammamax)
 }
