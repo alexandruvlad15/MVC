@@ -1,10 +1,10 @@
 package Views
 
 import (
-	"fmt"
+	"fmt" //pentru citire si afisare
 )
 
-func Read() (rho, G, S, P, Cx0, eta, k, Cz, Czmax, Cx float64) {
+func Read() (rho, G, S, P, Cx0, eta, k, Cz, Czmax, Cx float64) { //pentru citirea datelor/parametrilor
 	fmt.Print("rho=")
 	fmt.Scan(&rho)
 	fmt.Print("G=")
@@ -28,7 +28,7 @@ func Read() (rho, G, S, P, Cx0, eta, k, Cz, Czmax, Cx float64) {
 	return
 }
 
-func DispRes(x []float64, rho, S, P, G, Cx0, k, eta, Cz, Cx, v, gamma, Vmax, Gammamax float64) {
+func DispRes(x []float64, rho, S, P, G, Cx0, k, eta, Cz, Cx, v, gamma, Vmax, Gammamax float64) { //pentru afisarea celor 4 parametri de interes
 	fmt.Println("v=", v)
 	fmt.Println("gamma=", gamma)
 	fmt.Println("Vmax=", Vmax)
